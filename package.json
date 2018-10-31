@@ -1,27 +1,30 @@
 {
-  "name": "react-selffocus-a11y",
-  "version": "0.1.0",
-  "description": "A react component to focus on an element for accessibility.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/react-selffocus-a11y.git"
-  },
-  "keywords": [
-    "a11y",
-    "accessbility",
-    "web-accessibility",
-    "react-a11y",
-    "react-accessibility",
-    "a11y-focus"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anubhavsrivastava/react-selffocus-a11y/issues"
-  },
-  "homepage": "https://github.com/anubhavsrivastava/react-selffocus-a11y#readme"
+	"name": "react-selffocus-a11y",
+	"version": "0.1.0",
+	"description": "A react component to focus on an element for accessibility.",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/anubhavsrivastava/react-selffocus-a11y.git"
+	},
+	"keywords": [
+		"a11y",
+		"accessbility",
+		"web-accessibility",
+		"react-a11y",
+		"react-accessibility",
+		"a11y-focus"
+	],
+	"author": {
+		"name": "Anubhav Srivastava",
+		"email": "anubhav.srivastava00@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/anubhavsrivastava/react-selffocus-a11y/issues"
+	},
+	"homepage": "https://github.com/anubhavsrivastava/react-selffocus-a11y#readme"
 }
