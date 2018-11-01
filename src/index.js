@@ -13,7 +13,7 @@ const propTypes = {
 	tabIndex: PropTypes.number
 };
 
-class SelfFocus extends React.Component {
+class SelfFocus extends PureComponent {
 	componentDidMount() {
 		this.focusTag.focus();
 	}
