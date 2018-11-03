@@ -10,7 +10,7 @@ const defaultProps = {
 const propTypes = {
 	tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 	className: PropTypes.string,
-	tabIndex: PropTypes.number
+	tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 class SelfFocus extends PureComponent {
