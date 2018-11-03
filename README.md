@@ -7,11 +7,11 @@
 
 [![NPM](https://nodei.co/npm/react-selffocus-element.png?downloads=true&stars=true)](https://nodei.co/npm/react-selffocus-element/)
 
-A react component to focus on an element when it is mounted. This is essential for seeking attention on a particular element. This can also help in getting attention of screen readers like VoiceOver, JAWS, NVDA, and friends.
+A React component to focus on an element when it is mounted. This is essential for seeking attention on a particular element. This can also help in getting attention of screen readers like VoiceOver, JAWS, NVDA, and friends.
 
 ## Purpose
 
-As soon there is some user event (e.g click) which cause rendering of a section on React app. For eg, a `nav` link may cause a subsection to be mounted. At few instance and to help a11y, that particular section might require focus to seek user attention.
+As soon there is some user event (e.g click) which cause rendering of a section on React app. For eg, a `nav` link may cause a subsection to be mounted. At few instances and to help a11y, that particular section might require focus to seek user attention.
 
 In case of a11y, for section that are not role=`document` and do not contain `heading` section fail to get screen-reader's attention and are ignored until user manually tabs over them.
 Such case required a user focus, `react-selffocus-element` helps in solving this for react based apps.
@@ -40,17 +40,17 @@ yarn add react-selffocus-element
         render(){
             return (
                 <SelfFocus>
-                    This will only be content that will be focussed on component mount.
+                    This will only be content that will be focused on component mount.
                 </SelfFocus>
             )
         }
         ...
 
-    This is render `div`(by default) tag with autofocus. This element will also be focusable by default.
+    This is render `div`(by default) tag with autofocus. This element will also be focus-able by default.
 
     `Rendered DOM`
 
-        <div tabindex="0" >This will only be content that will be focussed on component mount.</div>
+        <div tabindex="0" >This will only be content that will be focused on component mount.</div>
 
 2.  With Custom Tag and TabIndex
 
@@ -61,17 +61,17 @@ yarn add react-selffocus-element
         render(){
             return (
                 <SelfFocus tag="p" tabIndex={-1}>
-                    This will only be content for custom tag and will be ocussed on component mount.
+                    This will only be content for custom tag and will be focused on component mount.
                 </SelfFocus>
             )
         }
         ...
 
-    This is render `p`(`tag` prop) tag with autofocus. This element will be focusable based on tabIndex prop. It is recommended that value of this prop should be 0 (natural tab order) or -1 (not tabbable).
+    This is render `p`(`tag` prop) tag with autofocus. This element will be focus-able based on tabIndex prop. It is recommended that value of this prop should be 0 (natural tab order) or -1 (not tabbable).
 
     `Rendered DOM `
 
-         <p tabindex="0" >This will only be content for custom tag and will be ocussed on component mount.</div>
+         <p tabindex="0" >This will only be content for custom tag and will be focused on component mount.</div>
 
 ## APIs
 
@@ -92,9 +92,9 @@ yarn add react-selffocus-element
 
 ## FAQ
 
-1.  I do not see focussed element with outline. How can it be controlled?
+1.  I do not see focused element with outline. How can it be controlled?
 
-    One should use additional custom css to achieve outline, which is normall in this form,
+    One should use additional custom css to achieve outline, which is normally in this form,
 
         *:focus {
             outline-style: auto !important;
@@ -124,10 +124,10 @@ yarn add react-selffocus-element
 
 5)  Does this work on ComponentDidUpdate?
 
-    No. There is no use case of focussing again on element after some state/prop change. In addition there may be `componentDidUpdate` functions triggered when it does not require focusing. Hence it is not currently supported.
+    No. There is no use case of focusing again on element after some state/prop change. In addition, there may be `componentDidUpdate` functions triggered when it does not require focusing. Hence, it is not currently supported.
 
 ## License
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-refer `LICENSE` file in this repository.
+Refer `LICENSE` file in this repository.
