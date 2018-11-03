@@ -11,6 +11,11 @@
 		"start": "webpack --watch",
 		"build": "webpack"
 	},
+	"jest": {
+		"setupFiles": [
+			"./tests/setupTests.js"
+		]
+	},
 	"peerDependencies": {
 		"react": ">15.0.0"
 	},
