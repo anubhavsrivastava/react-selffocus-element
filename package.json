@@ -1,6 +1,6 @@
 {
 	"name": "react-selffocus-element",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A react component to focus on an element for accessibility.",
 	"main": "dist/index.js",
 	"scripts": {
