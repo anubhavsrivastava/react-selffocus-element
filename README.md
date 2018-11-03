@@ -4,6 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/anubhavsrivastava/react-selffocus-element/badge.svg?branch=master)](https://coveralls.io/github/anubhavsrivastava/react-selffocus-element?branch=master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+[![NPM](https://nodei.co/npm/react-selffocus-element.png?downloads=true&stars=true)](https://nodei.co/npm/react-selffocus-element/)
+
 A react component to focus on an element for accessibility.
 
 ## Install
