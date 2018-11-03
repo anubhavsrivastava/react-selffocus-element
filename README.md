@@ -7,7 +7,16 @@
 
 [![NPM](https://nodei.co/npm/react-selffocus-element.png?downloads=true&stars=true)](https://nodei.co/npm/react-selffocus-element/)
 
-A react component to focus on an element for accessibility.
+A react component to focus on an element when it is mounted. This is essential for seeking attention on a particular element. This can also help in getting attention of screen readers like VoiceOver, JAWS, NVDA, and friends.
+
+## Purpose
+
+As soon there is some user event (e.g click) which cause rendering of a section on React app. For eg, a `nav` link may cause a subsection to be mounted. At few instance and to help a11y, that particular section might require focus to seek user attention.
+
+In case of a11y, for section that are not role=`document` and do not contain `heading` section fail to get screen-reader's attention and are ignored until user manually tabs over them.
+Such case required a user focus, `react-selffocus-element` helps in solving this for react based apps.
+
+For few scenarios, `aria-live` or `alert` does not make sense to seek attention for screen reader because that may not be same control. e.g. Seeking a focus on `list` or `tree` item helps them navigate as their respective roles without making them `alert`.
 
 ## Install
 
@@ -20,6 +29,102 @@ or
 ```
 yarn add react-selffocus-element
 ```
+
+## Example
+
+1.  `<SelfFocus>`
+
+        import SelfFocus from 'react-selffocus-element';
+
+        ...
+        render(){
+            return (
+                <SelfFocus>
+                    This will only be content that will be focussed on component mount.
+                </SelfFocus>
+            )
+        }
+        ...
+
+    This is render `div`(by default) tag with autofocus. This element will also be focusable by default.
+
+    `Rendered DOM`
+
+        <div tabindex="0" >This will only be content that will be focussed on component mount.</div>
+
+2.  With Custom Tag and TabIndex
+
+
+        import SelfFocus from 'react-selffocus-element';
+
+        ...
+        render(){
+            return (
+                <SelfFocus tag="p" tabIndex={-1}>
+                    This will only be content for custom tag and will be ocussed on component mount.
+                </SelfFocus>
+            )
+        }
+        ...
+
+    This is render `p`(`tag` prop) tag with autofocus. This element will be focusable based on tabIndex prop. It is recommended that value of this prop should be 0 (natural tab order) or -1 (not tabbable).
+
+    `Rendered DOM `
+
+         <p tabindex="0" >This will only be content for custom tag and will be ocussed on component mount.</div>
+
+## APIs
+
+### `SelfFocus` Component
+
+#### Import mechanism
+
+    import SelfFocus from 'react-selffocus-element'
+
+#### Properties
+
+| prop               | type            | description                                 | default value |
+| ------------------ | --------------- | ------------------------------------------- | ------------- |
+| children (default) | --              | Inner children for selfFocus Component      | `null`        |
+| tag                | htmlTag(String) | Component/Node to be rendered for focussing | `div`         |
+| className          | string          | additional Classname for particular div     | `<empty>`     |
+| tabIndex           | string/number   | tabbable order - 0/-1                       | `0`           |
+
+## FAQ
+
+1.  I do not see focussed element with outline. How can it be controlled?
+
+    One should use additional custom css to achieve outline, which is normall in this form,
+
+        *:focus {
+            outline-style: auto !important;
+            outline: auto !important;
+            outline-color: #2793f8 !important;
+        }
+
+    Also note that outline behavior for screen reader will also rely on screen reader and browser ( for eg, on electron running on window will be default render yellow border unless overwritten by css)
+
+2.  Should I use it for form input tag?
+
+    This component can be used for input tags but default `autoFocus` prop support provided by React should be used in conjunction with input tags. This will help browser functionalities to work as per focus specifications.
+
+3)  What about `role` and `aria-\*` attributes for that elements
+
+    You can specify `role` and all `aria-*` attributes on SelfFocus component and would be available on parent element.
+
+    e.g.
+
+        <SelfFocus tag="p" role="alert">
+
+    This will render a `p` tag with `role` as `alert`
+
+4)  What about other props that my component requires?
+
+    You can pass any key-value prop to `SelfFocus` and it will be rendered on main parent element. This is also how `aria-*` and `role` is supported.
+
+5)  Does this work on ComponentDidUpdate?
+
+    No. There is no use case of focussing again on element after some state/prop change. In addition there may be `componentDidUpdate` functions triggered when it does not require focusing. Hence it is not currently supported.
 
 ## License
 
