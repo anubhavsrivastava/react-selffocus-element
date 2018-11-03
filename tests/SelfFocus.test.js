@@ -44,4 +44,11 @@ describe('check isElectron detection to be correct', () => {
 		expect(wrapper.find('div p').length).toBe(1);
 		expect(wrapper.find('div p').text()).toBe('some nest p');
 	});
+
+	it('should render using other props in the root node', () => {
+		const wrapper = mount(<SelfFocus someprop1={1} someprop2={'2'} />);
+		expect(wrapper.children().length).toEqual(1);
+		expect(wrapper.find('div').prop('someprop1')).toEqual(1);
+		expect(wrapper.find('div').prop('someprop2')).toEqual('2');
+	});
 });
