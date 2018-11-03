@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/anubhavsrivastava/react-selffocus-element.svg?branch=master)](https://travis-ci.org/anubhavsrivastava/react-selffocus-element)
 [![Coverage Status](https://coveralls.io/repos/github/anubhavsrivastava/react-selffocus-element/badge.svg?branch=master)](https://coveralls.io/github/anubhavsrivastava/react-selffocus-element?branch=master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub issues](https://img.shields.io/github/issues/anubhavsrivastava/react-selffocus-element.svg?style=plastic)](https://github.com/anubhavsrivastava/react-selffocus-element/issues)
 
 [![NPM](https://nodei.co/npm/react-selffocus-element.png?downloads=true&stars=true)](https://nodei.co/npm/react-selffocus-element/)
 
