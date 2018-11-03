@@ -18,7 +18,7 @@ class SelfFocus extends PureComponent {
 		this.focusTag.focus();
 	}
 	render() {
-		let { className, tag: Tag, children, tabIndex = -1, ...rest } = this.props;
+		let { className, tag: Tag, children, tabIndex, ...rest } = this.props;
 		return (
 			<Tag
 				{...rest}
