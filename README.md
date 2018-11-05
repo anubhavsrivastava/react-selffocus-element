@@ -108,7 +108,7 @@ yarn add react-selffocus-element
 
   This component can be used for input tags but default `autoFocus` prop support provided by React should be used in conjunction with input tags. This will help browser functionalities to work as per focus specifications.
 
-#### 3)  What about `role` and `aria-\*` attributes for that elements
+#### 3.  What about `role` and `aria-\*` attributes for that elements
 
   You can specify `role` and all `aria-*` attributes on SelfFocus component and would be available on parent element.
 
@@ -118,11 +118,11 @@ yarn add react-selffocus-element
 
   This will render a `p` tag with `role` as `alert`
 
-#### 4)  What about other props that my component requires?
+#### 4.  What about other props that my component requires?
 
   You can pass any key-value prop to `SelfFocus` and it will be rendered on main parent element. This is also how `aria-*` and `role` is supported.
 
-#### 5)  Does this work on ComponentDidUpdate?
+#### 5.  Does this work on ComponentDidUpdate?
 
   No. There is no use case of focusing again on element after some state/prop change. In addition, there may be `componentDidUpdate` function triggered when it does not require focusing. Hence, it is currently not supported.
 
