@@ -128,6 +128,6 @@ yarn add react-selffocus-element
 
 ## License
 
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](LICENSE)
 
 Refer `LICENSE` file in this repository.
